@@ -3,7 +3,7 @@ const app = express()
 const port = process.env.PORT
 
 express()
-  .get('/', (req, res) => res.json('products.json'))
+  .get('/', (req, res) => res.render('products.json'))
   .listen(port, () => console.log(`Listening on ${ port }`))
 /*
 app.get('/', (req, res) => {
