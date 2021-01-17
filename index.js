@@ -15,3 +15,11 @@ app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
 */
+var mysql = require('mysql');
+var connection = mysql.createConnection(process.env.JAWSDB_URL);
+
+connection.connect();
+
+connection.query('CREATE TABLE Products (Name varchar(255))');
+
+connection.end();
