@@ -12,5 +12,5 @@ var ondisplay;
 var individualItems = [];
 
 express()
-  .get('/products', (req, res) => res.send(count))
+  .get('/products', (req, res) => res.json(JSON.parse('{"data":"' + count + '"}'))
   .listen(port, () => console.log(`Listening on ${port}`));
