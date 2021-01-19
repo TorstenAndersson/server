@@ -14,6 +14,11 @@ for (var i in products.products) {
   individualItems.push(products.products[i]);
 }
 
+alert(sudd);
+alert(merchandise);
+alert(onDisplay);
+alert(individualItems);
+
 express()
   .get('/', (req, res) => res.send("The official server of Johanssudd"))
   .get('/products', (req, res) => res.json(products))
