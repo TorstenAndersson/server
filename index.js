@@ -5,18 +5,18 @@ const products = JSON.parse('{"products": [{"name":"Sudd Johan","description":"B
 var sudd = [];
 var merchandise = [];
 var onDisplay = [];
-var individualItems = '{"items":[';
+var individualItems = '{"items":{"';
 
 for (var i in products.products) {
   if (products.products[i].type = "sudd") {sudd.push(products.products[i])};
   if (products.products[i].type = "merchandise") {merchandise.push(products.products[i])};
   if (products.products[i].ondisplay = "true") {onDisplay.push(products.products[i])};
-  individualItems += ('{"' + products.products[i].name.replace(" ", "") + '":' + JSON.stringify(products.products[i]) + '},');
+  individualItems += (products.products[i].name.replace(" ", "") + '":' + JSON.stringify(products.products[i]) + ',');
   //individualItems.push(products.products[i].name);
 }
 
 individualItems = individualItems.slice(0, -1);
-individualItems += "]}";
+individualItems += "}";
 
 express()
   .get('/', (req, res) => res.send(JSON.parse(individualItems).items.SuddJohan))
