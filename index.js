@@ -19,6 +19,6 @@ individualItems = individualItems.slice(0, -1);
 individualItems += "]}";
 
 express()
-  .get('/', (req, res) => res.send(JSON.parse(individualItems).items))
+  .get('/', (req, res) => res.send(JSON.parse(individualItems).items[0].SuddJohan))
   .get('/products', (req, res) => res.json(products))
   .listen(port, () => console.log(`Listening on ${port}`));
