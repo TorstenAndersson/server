@@ -22,5 +22,8 @@ express()
   //.get('/', (req, res) => res.send(JSON.parse(individualItems).items.SuddJohan))
   .get("/", (req, res) => res.json(JSON.parse(individualItems).items.SuddJohan))
   .get("/products", (req, res) => res.json(products))
-  .get("/product", (req, res) => res.json(JSON.parse(individualItems).items.req.query.wanted))
+  .get("/product", function(req, res) {
+    const wanted = req.query.wanted;
+    res.json(JSON.parse(individualItems).items.wanted);
+  }
   .listen(port, () => console.log("Listening on " + port));
