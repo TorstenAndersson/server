@@ -16,6 +16,7 @@ for (var i in products.products) {
 }
 
 individualItems = individualItems.slice(0, -1);
+individualItems += "]}";
 
 express()
   .get('/', (req, res) => res.send(individualItems))
