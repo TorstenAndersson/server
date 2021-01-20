@@ -16,6 +16,6 @@ for (var i in products.products) {
 }
 
 express()
-  .get('/', (req, res) => res.send(individualItems[1]))
+  .get('/', (req, res) => res.send(JSON.parse(individualItems[0]).SuddJohan))
   .get('/products', (req, res) => res.json(products))
   .listen(port, () => console.log(`Listening on ${port}`));
