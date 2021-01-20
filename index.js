@@ -15,7 +15,7 @@ for (var i in products.products) {
   //individualItems.push(products.products[i].name);
 }
 
-individualItems = individualItems.slice(0, -1) + "]}";
+individualItems = individualItems.slice(0, -1);
 
 express()
   .get('/', (req, res) => res.send(individualItems))
