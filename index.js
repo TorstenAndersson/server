@@ -11,8 +11,8 @@ for (var i in products.products) {
   if (products.products[i].type = "sudd") {sudd.push(products.products[i])};
   if (products.products[i].type = "merchandise") {merchandise.push(products.products[i])};
   if (products.products[i].ondisplay = "true") {onDisplay.push(products.products[i])};
-  //individualItems.push('{"' + products.products[i].name.toString() + '":"' + products.products[i] + '"}');
-  individualItems.push(products.products[i].name);
+  individualItems.push('{"' + String(products.products[i].name) + '":"' + products.products[i] + '"}');
+  //individualItems.push(products.products[i].name);
 }
 
 express()
