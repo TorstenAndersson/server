@@ -24,6 +24,6 @@ express()
   .get("/products", (req, res) => res.json(products))
   .get("/product", function(req, res) {
     const wanted = req.query.wanted;
-    res.json(JSON.parse(individualItems).items.eval(wanted));
+    res.json(JSON.parse(individualItems).items);
   })
   .listen(port, () => console.log("Listening on " + port));
