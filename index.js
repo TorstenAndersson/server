@@ -5,7 +5,7 @@ const products = JSON.parse('{"products": [{"name":"Sudd Johan","description":"B
 var sudd = [];
 var merchandise = [];
 var onDisplay = [];
-var individualItems = '{"items": ';
+var individualItems = '{"items":[';
 
 for (var i in products.products) {
   if (products.products[i].type = "sudd") {sudd.push(products.products[i])};
@@ -15,7 +15,7 @@ for (var i in products.products) {
   //individualItems.push(products.products[i].name);
 }
 
-individualItems += "}";
+individualItems += "]}";
 
 express()
   .get('/', (req, res) => res.send(individualItems))
