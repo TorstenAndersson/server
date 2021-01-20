@@ -5,7 +5,7 @@ const products = JSON.parse('{"products": [{"name":"Sudd Johan","description":"B
 var sudd = [];
 var merchandise = [];
 var onDisplay = [];
-var individualItems = '{"items":[{';
+var individualItems = '{"items":{';
 
 for (var i in products.products) {
   if (products.products[i].type = "sudd") {sudd.push(products.products[i])};
@@ -16,10 +16,10 @@ for (var i in products.products) {
 }
 
 individualItems = individualItems.slice(0, -1);
-individualItems += "}]}";
+individualItems += "}}";
 
 express()
   //.get('/', (req, res) => res.send(JSON.parse(individualItems).items.SuddJohan))
-  .get('/', (req, res) => res.send(JSON.parse(individualItems).items[0]))
+  .get('/', (req, res) => res.send(JSON.parse(individualItems).items))
   .get('/products', (req, res) => res.json(products))
   .listen(port, () => console.log(`Listening on ${port}`));
