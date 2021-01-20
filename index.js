@@ -11,11 +11,11 @@ for (var i in products.products) {
   if (products.products[i].type = "sudd") {sudd.push(products.products[i])};
   if (products.products[i].type = "merchandise") {merchandise.push(products.products[i])};
   if (products.products[i].ondisplay = "true") {onDisplay.push(products.products[i])};
-  individualItems.push('{"' + products.products[i].name.replace(" ", "%20") + '":"' + JSON.stringify(products.products[i]) + '"}');
+  individualItems.push('{"' + products.products[i].name.replace(" ", "") + '":"' + JSON.stringify(products.products[i]) + '"}');
   //individualItems.push(products.products[i].name);
 }
 
 express()
-  .get('/', (req, res) => res.send(individualItems.Sudd%20Johan))
+  .get('/', (req, res) => res.send(individualItems.SuddJohan))
   .get('/products', (req, res) => res.json(products))
   .listen(port, () => console.log(`Listening on ${port}`));
