@@ -15,7 +15,7 @@ for (var i in products.products) {
   //individualItems.push(products.products[i].name);
 }
 
-var individualItems += "}";
+individualItems += "}";
 
 express()
   .get('/', (req, res) => res.send(JSON.parse(individualItems.items).SuddJohan))
