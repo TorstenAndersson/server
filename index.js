@@ -16,7 +16,7 @@ for (var i in products.products) {
 }
 
 individualItems = individualItems.slice(0, -1);
-individualItems += "]}";
+individualItems += "}]}";
 
 express()
   //.get('/', (req, res) => res.send(JSON.parse(individualItems).items.SuddJohan))
