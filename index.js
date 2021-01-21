@@ -20,7 +20,7 @@ individualItems += "}}";
 
 express()
   //.get('/', (req, res) => res.send(JSON.parse(individualItems).items.SuddJohan))
-  .get("/", (req, res) => res.json(JSON.parse(individualItems).items.SuddJohan))
+  .get("/", (req, res) => res.send("The Official Server of Johanssudd"))
   .get("/products", (req, res) => res.json(products))
   .get("/product", (req, res) => res.json(JSON.parse(individualItems).items[req.query.wanted]))
   .listen(port, () => console.log("Listening on " + port));
