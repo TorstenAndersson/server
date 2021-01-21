@@ -23,5 +23,5 @@ express()
   .get("/", (req, res) => res.send("The Official Server of Johanssudd"))
   .get("/products", (req, res) => res.json(products))
   .get("/product", (req, res) => res.json(JSON.parse(individualItems).items[req.query.wanted]))
-  .get("/sudd", (req, res) => res.send(sudd))
+  .get("/sudd", (req, res) => res.json(JSON.parse(sudd)))
   .listen(port, () => console.log("Listening on " + port));
