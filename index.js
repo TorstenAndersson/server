@@ -25,10 +25,25 @@ individualItems = individualItems.slice(0, -1);
 individualItems += "}}";
 
 express()
-  //.get('/', (req, res) => res.send(JSON.parse(individualItems).items.SuddJohan))
-  res.append("Content-Type", "application/json")
-  .get("/", (req, res) => res.send("The Official Server of Johanssudd"))
-  .get("/products", (req, res) => res.json(JSON.parse(eval(req.query.wanted))))
-  .get("/product", (req, res) => res.json(JSON.parse(individualItems).items[req.query.wanted]))
-  .get("/sudd", (req, res) => res.json(JSON.parse(sudd)))
+
+  .get("/", function(req, res) {
+    res.append("Content-Type", "application/json");
+    res.send("The Official Server of Johanssudd");
+  })
+
+  .get("/products", function(req, res) {
+    res.append("Content-Type", "application/json");
+    res.json(JSON.parse(eval(req.query.wanted)));
+  })
+
+  .get("/product", function(req, res) {
+    res.append("Content-Type", "application/json"); 
+    res.json(JSON.parse(individualItems).items[req.query.wanted])
+  })
+
+  .get("/sudd", function(req, res) {
+    res.append("Content-Type", "application/json");
+    res.json(JSON.parse(sudd));
+  })
+
   .listen(port, () => console.log("Listening on " + port));
