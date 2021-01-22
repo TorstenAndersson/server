@@ -26,6 +26,7 @@ individualItems += "}}";
 
 express()
   //.get('/', (req, res) => res.send(JSON.parse(individualItems).items.SuddJohan))
+  res.append("Content-Type", "application/json")
   .get("/", (req, res) => res.send("The Official Server of Johanssudd"))
   .get("/products", (req, res) => res.json(JSON.parse(eval(req.query.wanted))))
   .get("/product", (req, res) => res.json(JSON.parse(individualItems).items[req.query.wanted]))
