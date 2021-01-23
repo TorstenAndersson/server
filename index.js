@@ -31,17 +31,17 @@ express()
   })
 
   .get("/products", function(req, res) {
-    res.append("Access-Control-Allow-Origin", "*");
+    res.append("Access-Control-Allow-Origin", "https://xenodochial-varahamihira-6786dc.netlify.app/");
     res.json(JSON.parse(eval(req.query.wanted)));
   })
 
   .get("/product", function(req, res) {
-    res.append("Access-Control-Allow-Origin", "*");
+    res.append("Access-Control-Allow-Origin", "https://xenodochial-varahamihira-6786dc.netlify.app/");
     res.json(JSON.parse(individualItems).items[req.query.wanted])
   })
 
   .get("/sudd", function(req, res) {
-    res.append("Access-Control-Allow-Origin", "*");
+    res.append("Access-Control-Allow-Origin", "https://xenodochial-varahamihira-6786dc.netlify.app/");
     res.json(JSON.parse(sudd));
   })
 
