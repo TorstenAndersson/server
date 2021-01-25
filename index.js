@@ -24,6 +24,10 @@ onDisplay = onDisplay.slice(0, -1);
 onDisplay += "]}";
 individualItems = individualItems.slice(0, -1);
 individualItems += "}}";
+sudd = JSON.parse(sudd);
+merchandise = JSON.parse(merchandise);
+onDisplay = JSON.parse(onDisplay);
+individualItems = JSON.parse(individualItems);
 
 express()
   .use(cors())
@@ -33,16 +37,11 @@ express()
   })
 
   .get("/products", function(req, res) {
-    res.json(JSON.parse(eval(req.query.wanted)));
-    //res.send(eval(req.query.wanted))
+    res.json(eval(req.query.wanted));
   })
 
   .get("/product", function(req, res) {
-    res.json(JSON.parse(individualItems).items[req.query.wanted])
-  })
-
-  .get("/sudd", function(req, res) {
-    res.json(JSON.parse(sudd));
+    res.json(individualItems).items[req.query.wanted];
   })
 
   .listen(port, () => console.log("Listening on " + port));
