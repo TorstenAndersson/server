@@ -26,20 +26,21 @@ individualItems = individualItems.slice(0, -1);
 individualItems += "}}";
 
 express()
+  .use(cors())
 
-  .get("/", cors(), function(req, res) {
+  .get("/", function(req, res) {
     res.send("The Official Server of Johanssudd");
   })
 
-  .get("/products", cors(), function(req, res) {
+  .get("/products", function(req, res) {
     res.json(JSON.parse(eval(req.query.wanted)));
   })
 
-  .get("/product", cors(), function(req, res) {
+  .get("/product", function(req, res) {
     res.json(JSON.parse(individualItems).items[req.query.wanted])
   })
 
-  .get("/sudd", cors(), function(req, res) {
+  .get("/sudd", function(req, res) {
     res.json(JSON.parse(sudd));
   })
 
