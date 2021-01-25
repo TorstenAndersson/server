@@ -17,11 +17,11 @@ for (var i in products.products) {
 }
 
 sudd = sudd.slice(0, -1);
-sudd += "}]}";
+sudd += "]}";
 merchandise = merchandise.slice(0, -1);
 merchandise += "]}";
 onDisplay = onDisplay.slice(0, -1);
-onDisplay += "}]}";
+onDisplay += "]}";
 individualItems = individualItems.slice(0, -1);
 individualItems += "}}";
 
