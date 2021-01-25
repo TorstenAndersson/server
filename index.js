@@ -41,7 +41,7 @@ express()
   })
 
   .get("/product", function(req, res) {
-    res.json(individualItems).items[req.query.wanted];
+    res.json(individualItems.items[req.query.wanted]);
   })
 
   .listen(port, () => console.log("Listening on " + port));
