@@ -33,7 +33,8 @@ express()
   })
 
   .get("/products", function(req, res) {
-    res.json(JSON.parse(eval(req.query.wanted)));
+    //res.json(JSON.parse(eval(req.query.wanted)));
+    res.send(eval(req.query.wanted))
   })
 
   .get("/product", function(req, res) {
