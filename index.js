@@ -10,7 +10,7 @@ var individualItems = '{"items":{';
 
 for (var i in products.products) {
   if (products.products[i].type == "sudd") sudd += JSON.stringify(products.products[i]).slice(1, -1) + ",";
-  if (products.products[i].type == "merchandise") merchandise += JSON.stringify(products.products[i]).slice + ",";
+  if (products.products[i].type == "merchandise") merchandise += JSON.stringify(products.products[i]) + ",";
   if (products.products[i].onDisplay == "true") onDisplay += JSON.stringify(products.products[i]).slice(1, -1) + ",";
   individualItems += '"' + (products.products[i].name.replace(" ", "") + '":' + JSON.stringify(products.products[i]) + ',');
   //individualItems.push(products.products[i].name);
