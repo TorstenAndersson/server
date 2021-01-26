@@ -32,9 +32,7 @@ individualItems = JSON.parse(individualItems);
 express()
   .use(cors())
 
-  .get("/", function(req, res) {
-    res.send("The Official Server of Johanssudd");
-  })
+  .get("/", () => res.send("The Official Server of Johanssudd"))
 
   .get("/products", function(req, res) {
     res.json(eval(req.query.wanted));
@@ -44,4 +42,4 @@ express()
     res.json(individualItems.items[req.query.wanted]);
   })
 
-  .listen(port, () => console.log("Listening on " + port));
+  .listen(port);
