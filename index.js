@@ -24,10 +24,12 @@ onDisplay = onDisplay.slice(0, -1);
 onDisplay += "]}";
 individualItems = individualItems.slice(0, -1);
 individualItems += "}}";
+/*
 sudd = JSON.parse(sudd);
 merchandise = JSON.parse(merchandise);
 onDisplay = JSON.parse(onDisplay);
 individualItems = JSON.parse(individualItems);
+*/
 
 express()
   .use(cors())
