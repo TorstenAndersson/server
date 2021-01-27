@@ -29,8 +29,13 @@ merchandise = JSON.parse(merchandise);
 onDisplay = JSON.parse(onDisplay);
 individualItems = JSON.parse(individualItems);
 
+var corsOptions = {
+  origin: 'https://xenodochial-varahamihira-6786dc.netlify.app/',
+  optionsSuccessStatus: 200
+}
+
 express()
-  .use(cors({origin: "https://xenodochial-varahamihira-6786dc.netlify.app/"}))
+  .use(cors(corsOptions))
 
   .get("/", () => res.send("The Official Server of Johanssudd"))
 
