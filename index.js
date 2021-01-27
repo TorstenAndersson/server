@@ -30,7 +30,7 @@ onDisplay = JSON.parse(onDisplay);
 individualItems = JSON.parse(individualItems);
 
 express()
-  .use(cors())
+  .use(cors({origin: "https://xenodochial-varahamihira-6786dc.netlify.app/"}))
 
   .get("/", () => res.send("The Official Server of Johanssudd"))
 
