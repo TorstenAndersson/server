@@ -29,6 +29,8 @@ merchandise = JSON.parse(merchandise);
 onDisplay = JSON.parse(onDisplay);
 individualItems = JSON.parse(individualItems);
 
+var allItems = '{"products":[' + sudd.slice(0, -1) + "," + merchandise.slice(1) + "]";
+
 express()
   .use(cors({options: "https://xenodochial-varahamihira-6786dc.netlify.app/"}))
 
@@ -37,5 +39,7 @@ express()
   .get("/products", (req, res) => res.json(eval(req.query.wanted)))
 
   .get("/product", (req, res) => res.json(individualItems.items[req.query.wanted]))
+
+  .get("/all", () => res.send(allItems))
 
   .listen(port);
