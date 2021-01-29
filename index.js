@@ -1,5 +1,6 @@
 const express = require("express");
-const cors = require("cors")
+const cors = require("cors");
+const fetch = require('node-fetch');
 const port = process.env.PORT;
 var products;
 fetch("https://johanssuddproducts.herokuapp.com/").then(response=>response.json).then(data=>products = data);
