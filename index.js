@@ -18,6 +18,8 @@ async function fetching() {
   products = await response.json();
 }
 
+setTimeout(function() {
+
 var sudd = '{"items":[';
 var merchandise = '{"items":[';
 var onDisplay = '{"items":[';
@@ -58,3 +60,4 @@ express()
   .get("/all", (req, res) => res.json(allItems))
 
   .listen(port);
+}, 10000);
