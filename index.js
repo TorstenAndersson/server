@@ -40,6 +40,6 @@ express()
 
   .get("/product", (req, res) => res.json(individualItems.items[req.query.wanted]))
 
-  .get("/all", () => res.send(allItems))
+  .get("/all", (req, res) => res.send(allItems))
 
   .listen(port);
