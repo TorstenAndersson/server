@@ -4,7 +4,7 @@ const fetch = require('node-fetch');
 const port = process.env.PORT;
 var products;
 //async ()=>await fetch("https://johanssuddproducts.herokuapp.com/").then(response=>response.json).then(data=>products = data);
-get_request();
+await get_request();
 async function get_request() {
   const res = await fetch("https://johanssuddproducts.herokuapp.com/");
   products = await res.json();//assuming data is json
