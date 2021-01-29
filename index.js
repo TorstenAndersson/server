@@ -29,7 +29,7 @@ merchandise = JSON.parse(merchandise);
 onDisplay = JSON.parse(onDisplay);
 individualItems = JSON.parse(individualItems);
 
-var allItems = '{"products":[' + JSON.stringify(sudd).slice(0, -3) + "," + JSON.stringify(merchandise).slice(11) + "]}";
+var allItems = '{"products":[' + JSON.stringify(sudd).slice(0, -2) + "," + JSON.stringify(merchandise).slice(10) + "]}";
 
 express()
   .use(cors({options: "https://xenodochial-varahamihira-6786dc.netlify.app/"}))
