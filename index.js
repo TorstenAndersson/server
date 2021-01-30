@@ -46,7 +46,7 @@ function launch() {
   onDisplay = JSON.parse(onDisplay);
   individualItems = JSON.parse(individualItems);
 
-  var allItems = '{"products":' + JSON.stringify(sudd).slice(0, -1) + "," + JSON.stringify(merchandise).slice(1) + "," + JSON.stringify(onDisplay).slice(0, -1) + "," + JSON.stringify(individualItems).slice(1) + "}";
+  var allItems = '{"products":' + JSON.stringify(sudd).slice(0, -1) + "," + JSON.stringify(merchandise).slice(1, -1) + "," + JSON.stringify(onDisplay).slice(1, -1) + "," + JSON.stringify(individualItems).slice(1) + "}";
 
   express()
     .use(cors({options: "https://xenodochial-varahamihira-6786dc.netlify.app/"}))
