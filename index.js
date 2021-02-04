@@ -51,7 +51,7 @@ function launch() {
   express()
     .use(cors({options: "https://xenodochial-varahamihira-6786dc.netlify.app/"}))
 
-    .get("/", (req, res) => res.send("The Official Server of Johanssudd"))
+    .get("/", (req, res) => res.send("<html><body><h1>HEY</h1></body></html>"))
 
     .get("/products", (req, res) => res.json(eval(req.query.wanted)))
 
